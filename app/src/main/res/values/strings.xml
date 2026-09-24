@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AIFacebookDetector</string>
+    <string name="accessibility_service_description">Placeholder accessibility service for AIFacebookDetector. Do not use this to read other apps.</string>
+    <string name="main_instructions">Cấp quyền overlay, sau đó chấp nhận hộp thoại chụp màn hình của hệ thống. Chạm nút tròn nổi để chụp khung hình hiện tại.</string>
+    <string name="start_floating_widget">Xin quyền và mở nút nổi</string>
+    <string name="stop_floating_widget">Tắt nút nổi</string>
+    <string name="floating_capture_button">Chụp màn hình</string>
+    <string name="overlay_notification_title">Nút chụp màn hình đang bật</string>
+    <string name="overlay_notification_text">Chạm nút tròn nổi để chụp. Vuốt thông báo này không tắt quyền hệ thống.</string>
+    <string name="capture_success">Đã chụp màn hình</string>
+    <string name="capture_failed">Không chụp được màn hình</string>
+    <string name="overlay_permission_required">Cần quyền hiển thị trên ứng dụng khác</string>
+    <string name="projection_permission_required">Cần chấp nhận quyền MediaProjection của hệ thống</string>
+    <string name="notification_permission_required">Cần quyền thông báo để chạy foreground service</string>
+    <string name="ai_warning_banner">⚠️ Cảnh báo: Ảnh có khả năng do AI tạo ra (%1$d%%)</string>
+    <string name="gemini_key_missing">Dán Gemini API key vào GEMINI_API_KEY trước khi phân tích</string>
+    <string name="gemini_analyze_failed">Không phân tích được ảnh với Gemini</string>
+</resources>
