@@ -60,7 +60,7 @@ dependencies {
     implementation("com.google.genai:google-genai:1.0.0")
 
     // Ktor + OkHttp engine để gọi HTTP API
-    val ktorVersion = "3.6.0"
+    val ktorVersion = "3.0.0"
     implementation("io.ktor:ktor-client-core:$ktorVersion")
     implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
     implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
