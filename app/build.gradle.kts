@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.aifacebookdetector"
-    compileSdk = 37
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.aifacebookdetector"
@@ -68,4 +68,11 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+}
+    configurations.all {
+    resolutionStrategy {
+        force("com.squareup.okhttp3:okhttp:4.12.0")
+        force("com.squareup.okhttp3:okhttp-android:4.12.0")
+        force("com.squareup.okhttp3:logging-interceptor:4.12.0")
+    }
 }
