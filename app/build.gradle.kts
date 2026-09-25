@@ -25,7 +25,8 @@ android {
             )
         }
     }
-packaging {
+
+    packaging {
         resources {
             excludes += "META-INF/INDEX.LIST"
             excludes += "META-INF/DEPENDENCIES"
@@ -35,7 +36,7 @@ packaging {
             excludes += "META-INF/NOTICE.txt"
         }
     }
-}
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -79,7 +80,8 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 }
-    configurations.all {
+
+configurations.all {
     resolutionStrategy {
         force("com.squareup.okhttp3:okhttp:4.12.0")
         force("com.squareup.okhttp3:okhttp-android:4.12.0")
