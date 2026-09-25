@@ -14,6 +14,7 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
+        buildConfigField("String", "GEMINI_API_KEY", "\"AQ.Ab8RN6IMksuZIFu2SQgNJKclElsc0t96yoSwK53WflOKkdU5CA\"")
     }
 
     buildTypes {
