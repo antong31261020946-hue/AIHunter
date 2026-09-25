@@ -14,7 +14,10 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-        buildConfigField("String", "GEMINI_API_KEY", "\"AQ.Ab8RN6IMksuZIFu2SQgNJKclElsc0t96yoSwK53WflOKkdU5CA\"")
+
+        // Lấy API Key từ biến môi trường của GitHub Actions, nếu không có sẽ lấy key mặc định
+        val apiKey = System.getenv("GEMINI_API_KEY") ?: "sadkfhvbawiu2391847"
+        buildConfigField("String", "GEMINI_API_KEY", "\"$apiKey\"")
     }
 
     buildTypes {
@@ -49,6 +52,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true // ĐÃ SỬA: Bật dòng này để cho phép tạo BuildConfigField
     }
 }
 
@@ -64,14 +68,14 @@ dependencies {
     // Google Gemini Android SDK (GenerativeModel)
     implementation("com.google.ai.client.generativeai:generativeai:0.9.0")
 
-    // Google Gemini (Firebase AI Logic — SDK được Google khuyến nghị cho Android)
+    // Google Gemini (Firebase AI Logic)
     implementation(platform("com.google.firebase:firebase-bom:34.18.0"))
     implementation("com.google.firebase:firebase-ai")
 
-    // Google GenAI Java SDK (Gemini Developer API / AI Studio)
+    // Google GenAI Java SDK
     implementation("com.google.genai:google-genai:1.0.0")
 
-    // Ktor + OkHttp engine để gọi HTTP API
+    // Ktor + OkHttp
     val ktorVersion = "3.0.0"
     implementation("io.ktor:ktor-client-core:$ktorVersion")
     implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
